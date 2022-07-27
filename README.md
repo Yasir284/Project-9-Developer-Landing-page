@@ -6,7 +6,7 @@
 
 - This project is a Developer landing page.This website is designed using pure HTML and CSS.
 
-- It took me 4-5hr to make this project.Please find link og project below:
+- It took me 4-5hr to make this project.Please find link of the project below:
 
 [![badge](https://img.shields.io/badge/LINK%20OF-PROJECT--9-red)](https://project9-27722.netlify.app/)
 
