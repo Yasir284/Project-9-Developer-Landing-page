@@ -1,6 +1,6 @@
 ![badge](https://img.shields.io/badge/MADE%20WITH-HTML%20%26%20CSS-blue)
 ![badge](https://img.shields.io/badge/TIME%20TAKEN-3--4hrs-red)
-[![badge](https://img.shields.io/badge/SEE%20DEMO%20-VISIT-green)](https://project8-27722.netlify.app/)
+[![badge](https://img.shields.io/badge/SEE%20DEMO%20-VISIT-green)](https://project9-27722.netlify.app/)
 
 # Project-9: Developer Landing page
 
@@ -8,7 +8,7 @@
 
 - It took me 4-5hr to make this project.Please find link og project below:
 
-[![badge](https://img.shields.io/badge/LINK%20OF-PROJECT--8-red)](https://project8-27722.netlify.app/)
+[![badge](https://img.shields.io/badge/LINK%20OF-PROJECT--9-red)](https://project9-27722.netlify.app/)
 
 ---
 
