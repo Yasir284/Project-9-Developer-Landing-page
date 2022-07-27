@@ -19,6 +19,7 @@
 ![App Screenshot](./project-9%20ss/project9-3.png)
 ![App Screenshot](./project-9%20ss/project9-4.png)
 ![App Screenshot](./project-9%20ss/project9-5.png)
+![App Screenshot](./project-9%20ss/whole_page.png)
 
 ---
 
