@@ -4,9 +4,9 @@
 
 # Project-9: Developer Landing page
 
-- This project is a Design landing page.This website is designed using pure HTML and CSS.
+- This project is a Developer landing page.This website is designed using pure HTML and CSS.
 
-- It took me 3-4hr to make this project.Please find link og project below:
+- It took me 4-5hr to make this project.Please find link og project below:
 
 [![badge](https://img.shields.io/badge/LINK%20OF-PROJECT--8-red)](https://project8-27722.netlify.app/)
 
@@ -14,7 +14,11 @@
 
 ## Screenshot
 
-![App Screenshot](./images/project8-image.png)
+![App Screenshot](<./project-9%20ss/project9-1%20(1).png>)
+![App Screenshot](./project-9%20ss/project9-2.png)
+![App Screenshot](./project-9%20ss/project9-3.png)
+![App Screenshot](./project-9%20ss/project9-4.png)
+![App Screenshot](./project-9%20ss/project9-5.png)
 
 ---
 
