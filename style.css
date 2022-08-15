@@ -11,6 +11,7 @@
 
 body {
   background-color: #f8f8fa;
+  box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {
@@ -377,11 +378,11 @@ nav {
 .download-section {
   background-color: #fff;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
   padding: 6% 5%;
-  position: relative;
 }
 
 .download-content>h1 {
@@ -393,35 +394,42 @@ nav {
   font-weight: 100;
 }
 
-.download-email form button {
-  font-family: Poppins;
-  background-color: #5569fc;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  position: absolute;
-  right: 5%;
-  transition: all 300ms ease-in-out;
-}
-
-.download-email form button:hover {
-  font-weight: bolder;
-}
-
-.download-email form input {
+.download-email form {
   background-color: #e9edfe;
-  width: 25rem;
-  padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 25px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.download-email input {
+  margin-left: 2rem;
+  background: transparent;
   border: none;
 }
 
-.download-email form input::placeholder {
+.download-email input::placeholder {
   color: #000;
   font-family: Poppins;
 }
 
+.download-btn {
+  font-family: Poppins;
+  background-color: #5569fc;
+  color: #fff;
+  border: 2px solid transparent;
+  padding: 0.8em 1.8em;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.download-email button:hover {
+  border: 2px solid #5569fc;
+  font-weight: bolder;
+  background-color: #fff;
+  color: #5569fc;
+  transition: all 200ms ease-in-out;
+}
 
 /* --------------------------- */
 /* ---------Footer------------ */
@@ -430,10 +438,12 @@ nav {
 .footer-section {
   padding: 5% 5%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-content: center;
+  align-content: baseline;
   background-color: #5569fc;
   color: #fff;
+  gap: 2rem;
 }
 
 .list {
@@ -445,8 +455,18 @@ nav {
   padding-top: 5%;
 }
 
-.footer-logos {
-  padding-right: 1rem;
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.footer-right-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 2rem;
 }
 
 .logos-list {
@@ -474,15 +494,26 @@ nav {
   }
 
   .footer-logos {
-    margin-right: 8px;
     width: 12%;
+  }
+
+  .download-email form input {
+    font-size: 0.9rem;
+  }
+
+  .download-btn {
+    font-size: 0.9rem;
   }
 }
 
 /* BREAKPOINT FOR MOBILE */
 @media (max-width:480px) {
   html {
-    font-size: 9px;
+    font-size: 8px;
+  }
+
+  header {
+    height: 80vh;
   }
 
   /* -----------Navbar---------------- */
@@ -506,12 +537,11 @@ nav {
 
   /* -----------Header-text---------------- */
   .hero {
-    width: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    /* gap: 1rem; */
     text-align: center;
   }
 
@@ -572,7 +602,8 @@ nav {
 
   .arrow {
     position: absolute;
-    bottom: 12%;
+    margin: auto 0;
+    bottom: 15%;
     left: 86%;
   }
 
@@ -613,6 +644,19 @@ nav {
 
   .faq-content h4 {
     max-width: 100%;
+  }
+
+  /* --------Download--------- */
+  .download-section {
+    justify-content: center;
+  }
+
+  .download-email form input {
+    font-size: 0.8rem;
+  }
+
+  .download-btn {
+    font-size: 0.8rem;
   }
 
 }

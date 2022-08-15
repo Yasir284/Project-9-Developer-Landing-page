@@ -24,11 +24,11 @@
 ## Screenshot
 
 - Desktop View screenshot
-  ![App Screenshot](./project-9%20ss/whole_page.png)
+  ![App Screenshot](./project-9%20ss/project-9ss.png)
 
 - Mobile View screenshot
 
-![Mobiele screenshot]()
+  ![Mobiele screenshot](./project-9%20ss/project9-mobilevs.png)
 
 ---
 
