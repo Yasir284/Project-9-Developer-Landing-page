@@ -23,7 +23,10 @@
 
 ## Screenshot
 
-![App Screenshot](./project-9%20ss/whole_page.png)
+- Desktop View screenshot
+  ![App Screenshot](./project-9%20ss/whole_page.png)
+
+- Mobile View screenshot
 
 ![Mobiele screenshot]()
 
