@@ -15,21 +15,16 @@ body {
 
 body::-webkit-scrollbar {
   width: 12px;
-  /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
   background: #e9edfe;
-  /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: #5569fc;
-  /* color of the scroll thumb */
   border-radius: 20px;
-  /* roundness of the scroll thumb */
   border: 3px solid #e9edfe;
-  /* creates padding around scroll thumb */
 }
 
 /* ----------------------------- */
@@ -40,7 +35,7 @@ header {
   height: 60vh;
   background-color: #5569fc;
   color: #fff;
-  padding: 1% 5% 0 5%;
+  padding: 1% 0 0 5%;
 }
 
 /* -----------Navbar---------------- */
@@ -50,26 +45,41 @@ nav {
   align-items: center;
   justify-content: flex-end;
   gap: 1.4em;
+  padding-right: 5%;
+}
+
+.ham {
+  display: none;
+  width: 5%;
 }
 
 .nav-item-active {
+  font-size: 1rem;
   background: #fff;
   color: #5569fc;
   border-radius: 3px;
-  padding: 5px 10px;
+  border: transparent solid 2px;
+  padding: 0.3em 0.6em;
   transition: all 300ms ease-in-out;
 }
 
 .nav-item-active:hover {
   font-weight: 800;
+  color: #fff;
+  background: #5569fc;
+  border: #fff solid 2px;
   cursor: pointer;
 }
 
 .nav-item {
-  transition: all 300ms ease-in-out;
+  padding-bottom: 3px;
+  background: linear-gradient(#fff, #fff) left bottom no-repeat;
+  background-size: 0% 0%;
+  transition: all 200ms ease-in-out;
 }
 
 .nav-item:hover {
+  background-size: 100% 2px;
   font-weight: 800;
   cursor: pointer;
 }
@@ -77,33 +87,33 @@ nav {
 /* -----------Header-text---------------- */
 
 .header-text {
+  max-width: 51%;
   padding-top: 5%;
+  float: left;
 }
 
 .header-text>h2 {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 100;
   letter-spacing: 1px;
   line-height: 1.5;
-  padding-bottom: 7px;
+  padding-bottom: 0.5rem;
 }
 
 .header-image {
   width: 40%;
-  position: absolute;
-  right: 0;
-  top: 10%;
+  float: right;
 }
 
 /* ---------Companies--------- */
 
 .companies {
-  padding: 2% 0% 0 1%;
+  margin: 1% 5%;
   margin-bottom: 5%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 50vw;
+  justify-content: space-between;
+  max-width: 50%;
 }
 
 .company-items {
@@ -112,6 +122,11 @@ nav {
   color: #000;
   font-weight: 600;
   font-size: large;
+  transition: all 300ms ease-in-out;
+}
+
+.company-items:hover {
+  color: #5569fc;
 }
 
 
@@ -123,19 +138,27 @@ nav {
   padding: 1% 5% 0 5%;
 }
 
+.api-heading {
+  max-width: 22%;
+  padding-bottom: 0.3em;
+}
+
 /* -------------Cards-------------- */
 
 .cards {
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
   margin-bottom: 6%;
 }
 
 .card-active {
+  max-width: 120px;
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(141, 135, 135, 0.377);
-  padding: 30px 20px;
+  padding: 30px 30px;
   border-radius: 5px;
 }
 
@@ -143,6 +166,7 @@ nav {
   color: #5569fc;
   padding: 10px 0 2px 0;
   font-size: 1em;
+  min-height: 3rem;
 }
 
 .card-body {
@@ -150,7 +174,20 @@ nav {
 }
 
 .card {
+  cursor: pointer;
+  border-radius: 5px;
+  max-width: 120px;
   padding: 30px 20px;
+  transition: all 200ms ease-in-out;
+}
+
+.card:hover {
+  background: #fff;
+  box-shadow: 1px 1px 5px rgba(141, 135, 135, 0.377);
+}
+
+.card h3 {
+  min-height: 3rem;
 }
 
 .card-head {
@@ -160,17 +197,21 @@ nav {
 
 .arrow {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 20px;
   height: 20px;
-  margin-top: 50px;
   padding: 10px;
-  font-size: xx-large;
   background-color: #5569fc;
   border-radius: 50%;
-  text-align: center;
   color: #fff;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.arrow:hover {
+  background: rgba(85, 104, 252, 0.432);
+  color: #5569fc;
 }
 
 /* ------------------------- */
@@ -194,15 +235,23 @@ nav {
   text-transform: capitalize;
 }
 
+.blog-heading>a:hover {
+  color: #000;
+  transition: all 200ms ease-in-out;
+}
+
 
 .blog-cards {
   display: flex;
   flex-direction: row;
-  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   margin-top: 2%;
 }
 
 .blog-card {
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -210,15 +259,25 @@ nav {
   border-radius: 10px;
   border-top-left-radius: 50px;
   box-shadow: 1px 1px 5px rgba(141, 135, 135, 0.377);
+  transition: all 200ms ease-in-out;
 }
 
-.blog-image>img {
+.blog-card:hover {
+  box-shadow: 4px 4px 15px rgba(141, 135, 135, 0.577);
+}
+
+.blog-image {
+  box-sizing: border-box;
+}
+
+.blog-image img {
+  width: 100%;
   height: 100%;
 }
 
 .blog-content {
   padding: 30px 10px 0px 40px;
-  width: 12em;
+  width: 12rem;
 }
 
 .blog-content>h6 {
@@ -228,13 +287,14 @@ nav {
 }
 
 .blog-content>small {
-  font-size: x-small;
+  overflow: hidden;
+  font-size: 0.8rem;
   padding: 0%;
   line-height: 0;
 }
 
 .blog-content>h3 {
-  font-size: 1em;
+  font-size: 1rem;
   padding: 0%;
   padding-bottom: 10px;
 }
@@ -276,33 +336,37 @@ nav {
 }
 
 .faq-content>h2 {
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: bolder;
 }
 
 .faq-content>h4 {
-  font-size: 0.6em;
+  font-size: 0.6rem;
+  max-width: 70%;
   padding-top: 5px;
 }
 
 .faq-content>.question {
   padding-top: 7%;
   padding-bottom: 2%;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .faq-content>button {
   background-color: #5569fc;
   color: #fff;
-  font-size: 0.6em;
-  border: none;
+  font-size: 0.6rem;
+  border: 2px solid transparent;
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 1.2em 2em;
   transition: all 300ms ease-in-out;
 }
 
 .faq-content>button:hover {
   font-weight: bolder;
+  background: #fff;
+  color: #5569fc;
+  border: 2px solid #5569fc;
   cursor: pointer;
 }
 
@@ -321,7 +385,7 @@ nav {
 }
 
 .download-content>h1 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bolder;
 }
 
@@ -376,20 +440,179 @@ nav {
   list-style: none;
   display: flex;
   flex-direction: row;
-  gap: 2em;
-  font-size: 0.6em;
+  gap: 2rem;
+  font-size: 0.6rem;
   padding-top: 5%;
 }
 
 .footer-logos {
-  padding-right: 1em;
+  padding-right: 1rem;
 }
 
 .logos-list {
   list-style: none;
   padding-top: 5%;
-  font-size: 0.6em;
+  font-size: 0.6rem;
   flex-direction: row;
   display: flex;
-  gap: 2em;
+  gap: 2rem;
+}
+
+/* BREAKPOINT FOR TABLET */
+@media (max-width:768px) {
+
+  html {
+    font-size: 10px;
+  }
+
+  .logo {
+    width: 16%;
+  }
+
+  .footer-logo {
+    width: 30%;
+  }
+
+  .footer-logos {
+    margin-right: 8px;
+    width: 12%;
+  }
+}
+
+/* BREAKPOINT FOR MOBILE */
+@media (max-width:480px) {
+  html {
+    font-size: 9px;
+  }
+
+  /* -----------Navbar---------------- */
+  nav {
+    display: none;
+  }
+
+  .ham {
+    display: block;
+    width: 5%;
+    filter: brightness(0) invert(1);
+  }
+
+  .logo-ham {
+    margin: 3% 5% 3% 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* -----------Header-text---------------- */
+  .hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1rem; */
+    text-align: center;
+  }
+
+  .hero [alt="rectangle"] {
+    display: none;
+  }
+
+  .header-text {
+    max-width: 80%;
+    float: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-image-div {
+    width: 50%;
+    margin-top: 2rem;
+  }
+
+  .header-image {
+    width: 100%;
+    float: none;
+    border-radius: 17px;
+  }
+
+  /* ---------Companies--------- */
+  .companies {
+    max-width: 100%;
+    margin-bottom: 10%;
+  }
+
+  /* ------------API's------------- */
+  .api-heading {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* -------------Cards-------------- */
+  .cards {
+    position: relative;
+    margin-top: 4%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-active {
+    padding: 30px 5px;
+    text-align: center;
+  }
+
+  .card {
+    padding: 30px 5px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(141, 135, 135, 0.377);
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: 12%;
+    left: 86%;
+  }
+
+  /* ------Blog section ------*/
+
+  .blog-cards {
+    gap: 5rem;
+  }
+
+  .blog-card {
+    width: 80%;
+    position: relative;
+  }
+
+  .blog-image {
+    width: 35%;
+  }
+
+  .blog-content {
+    padding: 0%;
+    margin: 4% 6%;
+  }
+
+  .blog-bottom img {
+    width: 50%;
+  }
+
+  .blog-bottom {
+    bottom: -12%;
+    right: 40%;
+  }
+
+  .blog-author {
+    width: 57%;
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+
+  .faq-content h4 {
+    max-width: 100%;
+  }
+
 }
